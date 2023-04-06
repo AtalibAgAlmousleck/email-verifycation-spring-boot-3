@@ -1,0 +1,35 @@
+
+# ===============================
+# = Hibernate datasource
+# ===============================
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/email_verification
+    username: postgres
+    password: Admin
+  # ===============================
+  # = JPA configurations
+  # ===============================
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    database-platform: POSTGRESQL
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+# ===============================
+# = Email SMTP configurations
+# ===============================
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: atalibletouareg@gmail.com
+    password: lhewtpxgbmtklllf
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
